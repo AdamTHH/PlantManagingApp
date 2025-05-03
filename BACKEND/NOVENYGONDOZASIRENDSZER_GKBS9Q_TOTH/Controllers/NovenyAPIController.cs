@@ -39,7 +39,7 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers
             }
             catch (Exception ex)
             {
-                return BadRequest(ex.Message);
+                return BadRequest(ex.InnerException);
             }
         }
         [HttpPut("{id}")]

@@ -21,6 +21,7 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Data
             {
                 throw new Exception("A növény azonosítója már létezik.");
             }
+
             db.Novenyek.Add(noveny);
             db.SaveChanges();
         }

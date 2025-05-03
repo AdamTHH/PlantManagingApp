@@ -20,7 +20,7 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Data
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Noveny>()
-                .HasKey(n => n.Nev);
+                .HasKey(n => n.Id);
 
             base.OnModelCreating(modelBuilder);
         }

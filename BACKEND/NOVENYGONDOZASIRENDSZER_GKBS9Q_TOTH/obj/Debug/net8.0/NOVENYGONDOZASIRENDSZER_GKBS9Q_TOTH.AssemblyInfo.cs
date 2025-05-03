@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+0d6bfabce04fa4d64203029ff86ba051fffe01a4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f803411b6e8c768778ffebf7e64204766dd591e3")]
 [assembly: System.Reflection.AssemblyProductAttribute("NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
