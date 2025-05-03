@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\itzyt\\Desktop\\root\\server\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj": {}
+    "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj": {}
   },
   "projects": {
-    "C:\\Users\\itzyt\\Desktop\\root\\server\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj": {
+    "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\itzyt\\Desktop\\root\\server\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj",
+        "projectUniqueName": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj",
         "projectName": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH",
-        "projectPath": "C:\\Users\\itzyt\\Desktop\\root\\server\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj",
+        "projectPath": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj",
         "packagesPath": "C:\\Users\\itzyt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\itzyt\\Desktop\\root\\server\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\obj\\",
+        "outputPath": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Care System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body onload="getPlants()">
+    <div class="container mt-5">
+        <h1 class="text-center">Plant Care System</h1>
+        <form id="plant-form">
+            <div class="mb-3">
+                <label for="plantData" class="form-label">Enter Plant Data (comma-separated: Name, Type, Daily Water Requirement, Watering Frequency)</label>
+                <textarea class="form-control" id="plantData" rows="5" placeholder="e.g. Rose,Flower,0.5,2"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Generate Care Plan</button>
+        </form>
+        <h2 class="mt-5">Weekly Care Plan</h2>
+        <table class="table table-bordered mt-3" id="care-plan-table">
+            <thead>
+                <tr>
+                    <th>Plant Name</th>
+                    <th>Type</th>
+                    <th>Daily Water Requirement (L)</th>
+                    <th>Watering Frequency (Days)</th>
+                    <th>Total Water (L)</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            </tbody>
+        </table>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="index.js"></script>
+</body>
+</html>
