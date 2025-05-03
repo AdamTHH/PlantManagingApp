@@ -1,0 +1,119 @@
+[
+  {
+    "ContainingType": "Program\u002B\u003C\u003Ec",
+    "Method": "\u003C\u003CMain\u003E$\u003Eb__0_0",
+    "RelativePath": "",
+    "HttpMethod": "GET",
+    "IsController": false,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.String",
+        "MediaTypes": [
+          "text/plain"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers.NovenyController",
+    "Method": "ReadAll",
+    "RelativePath": "api/Noveny",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Models.Noveny, NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers.NovenyController",
+    "Method": "Create",
+    "RelativePath": "api/Noveny",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "noveny",
+        "Type": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Models.Noveny",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers.NovenyController",
+    "Method": "Read",
+    "RelativePath": "api/Noveny/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Models.Noveny",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers.NovenyController",
+    "Method": "Update",
+    "RelativePath": "api/Noveny/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "updatedNoveny",
+        "Type": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Models.Noveny",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers.NovenyController",
+    "Method": "Delete",
+    "RelativePath": "api/Noveny/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

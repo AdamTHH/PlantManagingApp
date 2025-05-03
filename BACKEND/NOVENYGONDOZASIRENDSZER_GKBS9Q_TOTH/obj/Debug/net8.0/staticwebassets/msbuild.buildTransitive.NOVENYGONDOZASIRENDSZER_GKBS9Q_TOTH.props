@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.props" />
+</Project>
