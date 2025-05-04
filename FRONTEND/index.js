@@ -63,13 +63,14 @@ function displayWeeklyPlan(dailyPlants) {
 
         const plantGrid = dailyPlan.napiOntozendoNovenyek.map(plant => {
             return `
-            <div class="d-flex justify-content-between border">
+            <div class="d-flex justify-content-between">
                 <span>${plant.nev}</span>
                 <span class="badge bg-primary">${plant.napiVizigeny}L</span>
             </div>`;
         }).join('');
 
-        dayDiv.innerHTML = `<div class="d-grid gap-2">${plantGrid}</div><p class="text-muted">Összesen: ${dailyPlan.napiVizigenySzum}L</p>`;
+        dayDiv.innerHTML = `<div class="d-grid gap-2">${plantGrid}</div>
+        <p class="text-muted">Összesen: ${dailyPlan.napiVizigenySzum}mL</p>`;
     });
 }
 
