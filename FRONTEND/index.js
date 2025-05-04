@@ -98,7 +98,7 @@ function updatePlant(plant) {
         redirect: "follow"
     };
 
-    fetch("https://localhost:7107/api/noveny/0", requestOptions)
+    fetch(`${url}/${plant.id}`, requestOptions)
         .then((response) => response.text())
         .then((result) => {
             console.log('Plant updated successfully');
