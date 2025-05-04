@@ -2,12 +2,23 @@
 
 namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Models
 {
+    using System.ComponentModel.DataAnnotations;
+
     public enum NovenyKategoria
     {
+        [Display(Name = "Szobanövény")]
         Szobanoveny = 1,
+
+        [Display(Name = "Kertinövény")]
         Kertinoveny = 2,
+
+        [Display(Name = "Virág")]
         Virag = 3,
+
+        [Display(Name = "Szukkulens")]
         Szukkulens = 4,
+
+        [Display(Name = "Fűszernövény")]
         FuszerNoveny = 5
     }
 

@@ -11,39 +11,37 @@
 
         <h3 class="mt-5">🪴Növények</h3>
 
-        <form id="plant-form" class="mt-3" onsubmit="createPlant(event)">
-            <div class="row">
-                <div class="col-md-3">
-                    <label for="name" class="form-label">Plant Name</label>
-                    <input type="text" id="name" class="form-control" placeholder="Enter plant name" required>
-                </div>
-                <div class="col-md-3">
-                    <label for="category" class="form-label">Category</label>
-                    <input type="number" id="category" class="form-control" placeholder="Enter category ID" required>
-                </div>
-                <div class="col-md-3">
-                    <label for="dailyWater" class="form-label">Daily Water (L)</label>
-                    <input type="number" id="dailyWater" class="form-control" placeholder="Enter daily water" step="0.1" required>
-                </div>
-                <div class="col-md-3">
-                    <label for="wateringFrequency" class="form-label">Watering Frequency (Days)</label>
-                    <input type="number" id="wateringFrequency" class="form-control" placeholder="Enter frequency" required>
-                </div>
+        <div class="card mt-3" style="width: 300px;">
+            <div class="card-body">
+            <form id="plant-form" onsubmit="createPlant(event)">
+            <div class="mb-2">
+            <input type="text" id="name" class="form-control" placeholder="Növény neve" required>
             </div>
-            <div class="text-center mt-3">
-                <button type="submit" class="btn btn-primary">Add Plant</button>
+            <div class="mb-2">
+            <input type="number" id="category" class="form-control" placeholder="Típus (pl. szobanövény, kertinövény)" required>
             </div>
-        </form>
+            <div class="mb-2">
+            <input type="number" id="dailyWater" class="form-control" placeholder="Napi vízigény (ml)" step="0.1" required>
+            </div>
+            <div class="mb-2">
+            <input type="number" id="wateringFrequency" class="form-control" placeholder="Öntözési gyakoriság (naponta)" required>
+            </div>
+            <div class="text-center mt-2">
+            <button type="submit" class="btn btn-primary btn-block">Új ➕</button>
+            </div>
+            </form>
+            </div>
+        </div>
 
         <table class="table table-bordered mt-3" id="plant-table">
             <thead>
-                <tr>
-                    <th>Plant Name</th>
-                    <th>Type</th>
-                    <th>Daily Water Requirement (L)</th>
-                    <th>Watering Frequency (Days)</th>
-                    <th>Műveletek</th>
-                </tr>
+            <tr>
+                <th>Növény neve</th>
+                <th>Típus</th>
+                <th>Napi vízigény (ml)</th>
+                <th>Öntözési gyakoriság (naponta)</th>
+                <th>Műveletek</th>
+            </tr>
             </thead>
             <tbody>
 
