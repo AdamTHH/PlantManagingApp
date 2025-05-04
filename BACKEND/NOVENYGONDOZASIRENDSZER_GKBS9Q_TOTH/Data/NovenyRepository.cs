@@ -61,7 +61,7 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Data
             }
         }
 
-        public List<DailyPlan> GetWeeklyPlan()
+        public IEnumerable<DailyPlan> GetWeeklyPlan()
         {
             var haviLista = new List<DailyPlan>();
             for (int i = 1; i < 32; i++)

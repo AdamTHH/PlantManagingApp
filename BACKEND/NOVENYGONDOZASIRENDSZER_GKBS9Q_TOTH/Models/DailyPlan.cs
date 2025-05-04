@@ -2,7 +2,7 @@
 {
     public class DailyPlan
     {
-        public List<Noveny> napiOntozendoNovenyek = new List<Noveny> ();
+        public IEnumerable<Noveny> napiOntozendoNovenyek { get; set; }
         public double napiVizigenySzum => napiOntozendoNovenyek.Sum(x => x.NapiVizigeny);
     }
 }

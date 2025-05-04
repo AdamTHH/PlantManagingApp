@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>🌱 Növénygondozási rendszer</title>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 </head>
+
 <body onload="getPlants()">
     <div class="container mt-5">
         <h1 class="text-center">🌱 Növénygondozási rendszer</h1>
@@ -13,35 +16,38 @@
 
         <div class="card mt-3" style="width: 300px;">
             <div class="card-body">
-            <form id="plant-form" onsubmit="createPlant(event)">
-            <div class="mb-2">
-            <input type="text" id="name" class="form-control" placeholder="Növény neve" required>
-            </div>
-            <div class="mb-2">
-            <input type="number" id="category" class="form-control" placeholder="Típus (pl. szobanövény, kertinövény)" required>
-            </div>
-            <div class="mb-2">
-            <input type="number" id="dailyWater" class="form-control" placeholder="Napi vízigény (ml)" step="0.1" required>
-            </div>
-            <div class="mb-2">
-            <input type="number" id="wateringFrequency" class="form-control" placeholder="Öntözési gyakoriság (naponta)" required>
-            </div>
-            <div class="text-center mt-2">
-            <button type="submit" class="btn btn-primary btn-block">Új ➕</button>
-            </div>
-            </form>
+                <form id="plant-form" onsubmit="createPlant(event)">
+                    <div class="mb-2">
+                        <input type="text" id="name" class="form-control" placeholder="Növény neve" required>
+                    </div>
+                    <div class="mb-2">
+                        <input type="number" id="category" class="form-control"
+                            placeholder="Típus (pl. szobanövény, kertinövény)" required>
+                    </div>
+                    <div class="mb-2">
+                        <input type="number" id="dailyWater" class="form-control" step="0.05" placeholder="Napi vízigény (ml)"
+                            required>
+                    </div>
+                    <div class="mb-2">
+                        <input type="number" id="wateringFrequency" class="form-control"
+                            placeholder="Öntözési gyakoriság (naponta)" required>
+                    </div>
+                    <div class="text-center mt-2">
+                        <button type="submit" class="btn btn-primary btn-block">Új ➕</button>
+                    </div>
+                </form>
             </div>
         </div>
 
         <table class="table table-bordered mt-3" id="plant-table">
             <thead>
-            <tr>
-                <th>Növény neve</th>
-                <th>Típus</th>
-                <th>Napi vízigény (ml)</th>
-                <th>Öntözési gyakoriság (naponta)</th>
-                <th>Műveletek</th>
-            </tr>
+                <tr>
+                    <th>Növény neve</th>
+                    <th>Típus</th>
+                    <th>Napi vízigény (ml)</th>
+                    <th>Öntözési gyakoriság (naponta)</th>
+                    <th>Műveletek</th>
+                </tr>
             </thead>
             <tbody>
 
@@ -53,7 +59,7 @@
 
     <div class="container mt-4">
         <h2 class="text-center mb-4">Havi naptár</h2>
-        
+
         <div class="table-responsive">
             <table class="table table-bordered">
                 <thead class="table-header">
@@ -69,51 +75,147 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td id="d1" class="text-end">1</td>
-                        <td id="d2" class="text-end">2</td>
-                        <td id="d3" class="text-end">3</td>
-                        <td id="d4" class="text-end">4</td>
-                        <td id="d5" class="text-end">5</td>
-                        <td id="d6" class="text-end">6</td>
-                        <td id="d7" class="text-end">7</td>
+                        <td class="text-end">
+                            <p>1</p>
+                            <div id="d1"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>2</p>
+                            <div id="d2"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>3</p>
+                            <div id="d3"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>4</p>
+                            <div id="d4"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>5</p>
+                            <div id="d5"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>6</p>
+                            <div id="d6"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>7</p>
+                            <div id="d7"></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td id="d8" class="text-end">8</td>
-                        <td id="d9" class="text-end">9</td>
-                        <td id="d10" class="text-end">10</td>
-                        <td id="d11" class="text-end">11</td>
-                        <td id="d12" class="text-end">12</td>
-                        <td id="d13" class="text-end">13</td>
-                        <td id="d14" class="text-end">14</td>
+                        <td class="text-end">
+                            <p>8</p>
+                            <div id="d8"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>9</p>
+                            <div id="d9"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>10</p>
+                            <div id="d10"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>11</p>
+                            <div id="d11"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>12</p>
+                            <div id="d12"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>13</p>
+                            <div id="d13"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>14</p>
+                            <div id="d14"></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td id="d15" class="text-end">15</td>
-                        <td id="d16" class="text-end">16</td>
-                        <td id="d17" class="text-end">17</td>
-                        <td id="d18" class="text-end">18</td>
-                        <td id="d19" class="text-end">19</td>
-                        <td id="d20" class="text-end">20</td>
-                        <td id="d21" class="text-end">21</td>
+                        <td class="text-end">
+                            <p>15</p>
+                            <div id="d15"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>16</p>
+                            <div id="d16"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>17</p>
+                            <div id="d17"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>18</p>
+                            <div id="d18"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>19</p>
+                            <div id="d19"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>20</p>
+                            <div id="d20"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>21</p>
+                            <div id="d21"></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td id="d22" class="text-end">22</td>
-                        <td id="d23" class="text-end">23</td>
-                        <td id="d24" class="text-end">24</td>
-                        <td id="d25" class="text-end">25</td>
-                        <td id="d26" class="text-end">26</td>
-                        <td id="d27" class="text-end">27</td>
-                        <td id="d28" class="text-end">28</td>
+                        <td class="text-end">
+                            <p>22</p>
+                            <div id="d22"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>23</p>
+                            <div id="d23"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>24</p>
+                            <div id="d24"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>25</p>
+                            <div id="d25"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>26</p>
+                            <div id="d26"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>27</p>
+                            <div id="d27"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>28</p>
+                            <div id="d28"></div>
+                        </td>
                     </tr>
                     <tr>
-                        <td id="d29" class="text-end">29</td>
-                        <td id="d30" class="text-end">30</td>
-                        <td id="d31" class="text-end">31</td>
+                        <td class="text-end">
+                            <p>29</p>
+                            <div id="d29"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>30</p>
+                            <div id="d30"></div>
+                        </td>
+                        <td class="text-end">
+                            <p>31</p>
+                            <div id="d31"></div>
+                        </td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq"
+        crossorigin="anonymous"></script>
     <script src="index.js"></script>
 </body>
+
 </html>

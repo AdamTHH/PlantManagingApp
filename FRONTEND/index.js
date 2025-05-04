@@ -10,6 +10,10 @@ function getPlants() {
         .catch(error => console.error(error));
 }
 
+function getWeeklyPlan() {
+
+}
+
 function displayPlants(plants) {
     const tbody = document.getElementById("plant-table").querySelector('tbody');
     tbody.innerHTML = '';
@@ -18,9 +22,9 @@ function displayPlants(plants) {
 
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td style="font-weight: 600;">${p.nev}</td> <!-- Semibold for plant name -->
+            <td style="font-weight: 600;">${p.nev}</td>
             <td>${p.kategoria}</td>
-            <td style="background-color: rgba(0, 0, 255, ${opacity});">${p.napiVizigeny}</td> <!-- Blue background with dynamic opacity -->
+            <td style="background-color: rgba(0, 0, 255, ${opacity});">${p.napiVizigeny}</td>
             <td>${p.ontozesiGyakorisag}</td>
             <td>
                 <button class="btn btn-warning btn-sm edit-btn">✏️</button>
@@ -47,7 +51,7 @@ function editStart(row, plant) {
     row.innerHTML = `
         <td><input type="text" class="form-control plant-name" value="${plant.nev}"></td>
         <td><input type="number" class="form-control plant-category" value="${plant.kategoria}"></td>
-        <td><input type="number" class="form-control plant-daily-water" value="${plant.napiVizigeny}" step="0.1"></td>
+        <td><input type="number" class="form-control plant-daily-water" value="${plant.napiVizigeny}"></td>
         <td><input type="number" class="form-control plant-watering-frequency" value="${plant.ontozesiGyakorisag}"></td>
         <td>
             <button class="btn btn-success btn-sm save-btn">💾</button>

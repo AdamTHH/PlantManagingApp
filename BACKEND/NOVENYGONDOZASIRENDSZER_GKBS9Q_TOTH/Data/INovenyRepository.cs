@@ -10,6 +10,6 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Data
         IEnumerable<Noveny> Read();
         void Update(int id, Noveny updatedNoveny);
         void Delete(int id);
-        IEnumerable<object> GetWeeklyPlan();
+        IEnumerable<DailyPlan> GetWeeklyPlan();
     }
 }

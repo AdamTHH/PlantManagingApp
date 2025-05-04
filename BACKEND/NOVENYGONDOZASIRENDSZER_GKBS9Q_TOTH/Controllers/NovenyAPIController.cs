@@ -68,5 +68,20 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers
                 return BadRequest(ex.Message);
             }
         }
+
+        [HttpGet("getweeklyplan")]
+        public ActionResult<IEnumerable<DailyPlan>> GetWeeklyPlan()
+        {
+            try
+            {
+                var weeklyPlan = repo.GetWeeklyPlan();
+                return Ok(weeklyPlan);
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
+
     }
 }

@@ -115,5 +115,25 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers.NovenyController",
+    "Method": "GetWeeklyPlan",
+    "RelativePath": "api/Noveny/getweeklyplan",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.IEnumerable\u00601[[NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Models.DailyPlan, NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
   }
 ]
