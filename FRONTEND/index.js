@@ -69,8 +69,11 @@ function displayWeeklyPlan(dailyPlants) {
             </div>`;
         }).join('');
 
-        dayDiv.innerHTML = `<div class="d-grid gap-2">${plantGrid}</div>
-        <p class="text-muted">Összesen: ${dailyPlan.napiVizigenySzum}mL</p>`;
+        dayDiv.innerHTML = `<div>${plantGrid}</div>
+        <div class="d-flex justify-content-between">
+            <span class="text-info">Összesen:</span>
+            <span class="text-info font-weight-bold">${dailyPlan.napiVizigenySzum} mL</span>
+        </div>`;
     });
 }
 
