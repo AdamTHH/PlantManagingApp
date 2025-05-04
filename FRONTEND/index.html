@@ -15,48 +15,66 @@
 
         <h3 class="mt-5">🪴Növények</h3>
 
-        <div class="d-flex m-2">
-            <div class="card" style="width: 350px; height: auto;">
-                <div class="card-body">
-                    <form id="plant-form" onsubmit="createPlant(event)">
-                        <div class="mb-2">
-                            <input type="text" id="name" class="form-control" placeholder="Növény neve" required>
+
+        <div class="row m-2">
+            <div class="col-md-4">
+                <div class="d-flex flex-column justify-content-center align-items-center">
+                    <div class="card mb-3" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <form id="plant-form" onsubmit="createPlant(event)">
+                                <div class="mb-2">
+                                    <input type="text" id="name" class="form-control" placeholder="Növény neve" required>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="number" id="category" class="form-control" placeholder="Típus" required>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="number" id="dailyWater" class="form-control" step="0.05"
+                                        placeholder="Napi vízigény (ml)" required>
+                                </div>
+                                <div class="mb-2">
+                                    <input type="number" id="wateringFrequency" class="form-control"
+                                        placeholder="Öntözési gyakoriság (naponta)" required>
+                                </div>
+                                <div class="text-center mt-2">
+                                    <button type="submit" class="btn btn-success btn-block">Új ➕</button>
+                                </div>
+                            </form>
                         </div>
-                        <div class="mb-2">
-                            <input type="number" id="category" class="form-control" placeholder="Típus" required>
+                    </div>
+
+                    <h5>VAGY</h5>
+
+                    <div class="card mb-3" style="width: 100%; height: auto;">
+                        <div class="card-body">
+                            <textarea id="matrix-input" class="form-control" rows="6"
+                                placeholder="Rózsa,Virág,2,3 Aloe Vera,Szukkulens,0.5,30..."></textarea>
+                            <div class="text-center mt-2">
+                                <button onclick="uploadMatrix()" class="btn btn-primary btn-block">Mátrix feltöltése</button>
+                            </div>
                         </div>
-                        <div class="mb-2">
-                            <input type="number" id="dailyWater" class="form-control" step="0.05"
-                                placeholder="Napi vízigény (ml)" required>
-                        </div>
-                        <div class="mb-2">
-                            <input type="number" id="wateringFrequency" class="form-control"
-                                placeholder="Öntözési gyakoriság (naponta)" required>
-                        </div>
-                        <div class="text-center mt-2">
-                            <button type="submit" class="btn btn-success btn-block">Új ➕</button>
-                        </div>
-                    </form>
+                    </div>
                 </div>
             </div>
 
-            <table class="table table-bordered m-2" id="plant-table">
-                <thead>
-                    <tr>
-                        <th>Növény neve</th>
-                        <th>Típus</th>
-                        <th>Napi vízigény (ml)</th>
-                        <th>Öntözési gyakoriság (naponta)</th>
-                        <th>Műveletek</th>
-                    </tr>
-                </thead>
-                <tbody>
+            <div class="col-md-8">
+                <table class="table table-bordered" id="plant-table">
+                    <thead>
+                        <tr>
+                            <th>Növény neve</th>
+                            <th>Típus</th>
+                            <th>Napi vízigény (ml)</th>
+                            <th>Öntözési gyakoriság (naponta)</th>
+                            <th>Műveletek</th>
+                        </tr>
+                    </thead>
+                    <tbody>
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
         </div>
     </div>
-
 
 
     <div class="container mt-3 py-3 bg-light shadow-lg">

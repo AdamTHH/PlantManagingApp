@@ -65,7 +65,7 @@ function displayWeeklyPlan(dailyPlants) {
             return `
             <div class="d-flex justify-content-between">
                 <span>${plant.nev}</span>
-                <span class="badge bg-primary">${plant.napiVizigeny}L</span>
+                <span class="badge bg-primary">${plant.napiVizigeny} mL</span>
             </div>`;
         }).join('');
 
