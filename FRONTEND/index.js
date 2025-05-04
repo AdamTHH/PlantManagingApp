@@ -1,6 +1,6 @@
 let url = 'https://localhost:7107/api/noveny';
 
-function getPlants() {
+function refreshPlants() {
     fetch(url)
         .then(response => response.json())
         .then(data => {
@@ -8,10 +8,20 @@ function getPlants() {
             displayPlants(data);
         })
         .catch(error => console.error(error));
-}
 
-function getWeeklyPlan() {
+    const requestOptions = {
+        method: "GET",
+        redirect: "follow"
+    };
 
+    fetch(`${url}/getweeklyplan`, requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+            const dailyPlants = JSON.parse(result);
+            console.log("dailyPlants:", dailyPlants);
+            displayWeeklyPlan(dailyPlants);
+        })
+        .catch((error) => console.error(error));
 }
 
 function displayPlants(plants) {
@@ -36,7 +46,7 @@ function displayPlants(plants) {
         const deleteButton = row.getElementsByClassName('delete-btn')[0];
 
         editButton.addEventListener('click', () => {
-            editStart(row, p);
+            editRow(row, p);
         });
 
         deleteButton.addEventListener('click', () => {
@@ -47,7 +57,24 @@ function displayPlants(plants) {
     });
 }
 
-function editStart(row, plant) {
+function displayWeeklyPlan(dailyPlants) {
+    dailyPlants.forEach((dailyPlan, index) => {
+        const dayDiv = document.getElementById(`d${index + 1}`);
+
+        const plantGrid = dailyPlan.napiOntozendoNovenyek.map(plant => {
+            return `
+            <div class="d-flex justify-content-between border">
+                <span>${plant.nev}</span>
+                <span class="badge bg-primary">${plant.napiVizigeny}L</span>
+            </div>`;
+        }).join('');
+
+        dayDiv.innerHTML = `<div class="d-grid gap-2">${plantGrid}</div><p class="text-muted">Összesen: ${dailyPlan.napiVizigenySzum}L</p>`;
+    });
+}
+
+
+function editRow(row, plant) {
     row.innerHTML = `
         <td><input type="text" class="form-control plant-name" value="${plant.nev}"></td>
         <td><input type="number" class="form-control plant-category" value="${plant.kategoria}"></td>
@@ -74,7 +101,7 @@ function editStart(row, plant) {
     });
 
     cancelButton.addEventListener('click', () => {
-        getPlants();
+        refreshPlants();
     });
 }
 
@@ -84,7 +111,7 @@ function deletePlant(id) {
     })
         .then(r => {
             console.log(`ID=${id} deleted`);
-            getPlants();
+            refreshPlants();
         })
         .catch(error => console.error(error));
 }
@@ -106,7 +133,7 @@ function updatePlant(plant) {
         .then((response) => response.text())
         .then((result) => {
             console.log('Plant updated successfully');
-            getPlants();
+            refreshPlants();
         })
         .catch((error) => console.error(error));
 }
@@ -144,7 +171,7 @@ function createPlant(event) {
         })
         .then(data => {
             console.log("Plant added successfully:", data);
-            getPlants();
+            refreshPlants();
         })
         .catch(error => {
             console.error('Failed to add plant:', error.message);
