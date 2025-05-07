@@ -278,14 +278,13 @@
       },
       "NovenyKategoria": {
         "enum": [
-          1,
-          2,
-          3,
-          4,
-          5
+          "Szobanoveny",
+          "Kertinoveny",
+          "Virag",
+          "Szukkulens",
+          "FuszerNoveny"
         ],
-        "type": "integer",
-        "format": "int32"
+        "type": "string"
       }
     }
   }

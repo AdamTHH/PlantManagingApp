@@ -77,6 +77,10 @@ function displayWeeklyPlan(dailyPlants) {
     });
 }
 
+function uploadMatrix() {
+    
+}
+
 
 function editRow(row, plant) {
     row.innerHTML = `
@@ -150,7 +154,7 @@ function createPlant(event) {
 
     const raw = JSON.stringify({
         nev: document.getElementById('name').value,
-        kategoria: parseInt(document.getElementById('category').value),
+        kategoria: document.getElementById('category').value,
         napiVizigeny: parseFloat(document.getElementById('dailyWater').value),
         ontozesiGyakorisag: parseInt(document.getElementById('wateringFrequency').value)
     });
