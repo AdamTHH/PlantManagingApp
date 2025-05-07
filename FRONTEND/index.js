@@ -78,14 +78,37 @@ function displayWeeklyPlan(dailyPlants) {
 }
 
 function uploadMatrix() {
-    
+    const myHeaders = new Headers();
+    myHeaders.append("Content-Type", "application/json");
+
+    const raw = JSON.stringify(
+        document.getElementById("matrix-input").value
+    );
+
+    const requestOptions = {
+        method: "POST",
+        headers: myHeaders,
+        body: raw,
+        redirect: "follow"
+    };
+
+    fetch(`${url}/uploadmatrix`, requestOptions)
+        .then((response) => response.text())
+        .then((result) => console.log(result))
+        .catch((error) => console.error(error));
 }
 
 
 function editRow(row, plant) {
     row.innerHTML = `
         <td><input type="text" class="form-control plant-name" value="${plant.nev}"></td>
-        <td><input type="number" class="form-control plant-category" value="${plant.kategoria}"></td>
+        <td><select id="editCategoryDropdown" class="form-control" required>
+    <option value="Virag" ${plant.kategoria === "Virag" ? "selected" : ""}>Virág</option>
+    <option value="Szukkulens" ${plant.kategoria === "Szukkulens" ? "selected" : ""}>Szukkulens</option>
+    <option value="FuszerNoveny" ${plant.kategoria === "FuszerNoveny" ? "selected" : ""}>Fűszernövény</option>
+    <option value="Kertinoveny" ${plant.kategoria === "Kertinoveny" ? "selected" : ""}>Kertinövény</option>
+    <option value="Szobanoveny" ${plant.kategoria === "Szobanoveny" ? "selected" : ""}>Szobanövény</option>
+</select></td>
         <td><input type="number" class="form-control plant-daily-water" value="${plant.napiVizigeny}"></td>
         <td><input type="number" class="form-control plant-watering-frequency" value="${plant.ontozesiGyakorisag}"></td>
         <td>
@@ -101,7 +124,7 @@ function editRow(row, plant) {
         const updatedPlant = {
             id: plant.id,
             nev: row.querySelector('.plant-name').value,
-            kategoria: parseInt(row.querySelector('.plant-category').value),
+            kategoria: row.querySelector('#editCategoryDropdown').value,
             napiVizigeny: parseFloat(row.querySelector('.plant-daily-water').value),
             ontozesiGyakorisag: parseInt(row.querySelector('.plant-watering-frequency').value),
         };
@@ -169,20 +192,10 @@ function createPlant(event) {
     };
 
     fetch(url, requestOptions)
-        .then(response => {
-            if (!response.ok) {
-                return response.json().then(errorData => {
-                    throw new Error(`Error ${response.status}: ${errorData.message || response.statusText}`);
-                });
-            }
-            return response.json();
-        })
-        .then(data => {
-            console.log("Plant added successfully:", data);
+        .then((response) => response.text())
+        .then((result) => {
+            console.log("plant added: ", result);
             refreshPlants();
         })
-        .catch(error => {
-            console.error('Failed to add plant:', error.message);
-            alert(`Failed to add plant: ${error.message}`);
-        });
+        .catch((error) => console.error(error));
 }

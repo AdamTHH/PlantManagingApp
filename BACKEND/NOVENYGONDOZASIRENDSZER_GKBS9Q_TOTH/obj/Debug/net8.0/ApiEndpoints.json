@@ -135,5 +135,21 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers.NovenyController",
+    "Method": "UploadMatrix",
+    "RelativePath": "api/Noveny/uploadmatrix",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "novenyMatrix",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

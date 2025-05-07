@@ -82,6 +82,46 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpPost("uploadmatrix")]
+        public ActionResult UploadMatrix([FromBody] string novenyMatrix)
+        {
+            try
+            {
+                var rows = novenyMatrix.Split(new[] { '\n' }, StringSplitOptions.RemoveEmptyEntries);
+                foreach (var row in rows)
+                {
+                    var asd = row.Split(',');
+                    if (asd.Length != 4)
+                    {
+                        return BadRequest("Invalid matrix format.");
+                    }
 
+                    var nev = asd[0].Trim();
+                    if (!Enum.TryParse<NovenyKategoria>(asd[1].Trim(), out var kategoria))
+                    {
+                        return BadRequest($"Invalid category: {asd[1]}");
+                    }
+
+                    if (!double.TryParse(asd[2].Trim(), out var napiVizigeny))
+                    {
+                        return BadRequest($"Invalid daily water requirement: {asd[2]}");
+                    }
+
+                    if (!int.TryParse(asd[3].Trim(), out var ontozesiGyakorisag))
+                    {
+                        return BadRequest($"Invalid watering frequency: {asd[3]}");
+                    }
+
+                    var noveny = new Noveny(nev, kategoria, napiVizigeny, ontozesiGyakorisag);
+                    repo.Create(noveny);
+                }
+
+                return Ok("Matrix processed successfully.");
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }
