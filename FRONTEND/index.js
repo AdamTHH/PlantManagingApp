@@ -58,22 +58,39 @@ function displayPlants(plants) {
 }
 
 function displayWeeklyPlan(dailyPlants) {
-    dailyPlants.forEach((dailyPlan, index) => {
-        const dayDiv = document.getElementById(`d${index + 1}`);
+    const tableBody = document.getElementById("weekly-plan-table").querySelector('tbody');
+    tableBody.innerHTML = "";
 
-        const plantGrid = dailyPlan.napiOntozendoNovenyek.map(plant =>
+    dailyPlants.forEach((dailyPlan, index) => {
+        if (index % 7 === 0) {
+            row = document.createElement("tr");
+            tableBody.appendChild(row);
+        }
+
+        const cell = document.createElement("td");
+        cell.innerHTML = `<p>${index + 1}</p>`;
+
+
+        const plantList = dailyPlan.napiOntozendoNovenyek.map(plant =>
             `<div class="d-flex justify-content-between">
                 <span class="fw-medium">${plant.nev}</span>
                 <span class="text-primary">${plant.napiVizigeny} mL</span>
             </div>`
-        ).join('');
+        ).join("");
 
-        dayDiv.innerHTML = `<div>${plantGrid}</div>
-        <hr class="${dailyPlan.napiVizigenySzum > 0 ? "d-flex" : "d-none"}">
-        <div class="${dailyPlan.napiVizigenySzum > 0 ? "d-flex" : "d-none"} justify-content-between">
-            <span class="text-info">Összesen:</span>
-            <span class="text-info font-weight-bold">${dailyPlan.napiVizigenySzum} mL</span>
-        </div>`;
+        const dayDiv = document.createElement("div");
+
+        dayDiv.innerHTML = `
+            <div>${plantList}</div>
+            <hr class="${dailyPlan.napiVizigenySzum > 0 ? "d-flex" : "d-none"}">
+            <div class="${dailyPlan.napiVizigenySzum > 0 ? "d-flex" : "d-none"} justify-content-between">
+                <span class="text-info">Összesen:</span>
+                <span class="text-info fw-bold">${dailyPlan.napiVizigenySzum} mL</span>
+            </div>
+        `;
+        
+        cell.appendChild(dayDiv);
+        row.appendChild(cell);
     });
 }
 
