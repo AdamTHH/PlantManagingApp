@@ -72,5 +72,18 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Data
             }
             return haviLista;
         }
+        public void UploadMatrix(string novenyMatrix)
+        {
+            foreach (var row in novenyMatrix.Split('\n', StringSplitOptions.RemoveEmptyEntries))
+            {
+                var values = row.Split(',');
+
+                var kategoria = Noveny.GetNovenyEnum(values[1].Trim());
+                var napiVizigeny = double.Parse(values[2].Trim());
+                var ontozesiGyakorisag = int.Parse(values[3].Trim());
+
+                Create(new Noveny(values[0].Trim(), kategoria, napiVizigeny, ontozesiGyakorisag));
+            }
+        }
     }
 }

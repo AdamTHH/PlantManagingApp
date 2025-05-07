@@ -94,7 +94,7 @@ function uploadMatrix() {
 
     fetch(`${url}/uploadmatrix`, requestOptions)
         .then((response) => response.text())
-        .then((result) => console.log(result))
+        .then((result) => {console.log(result); refreshPlants();})
         .catch((error) => console.error(error));
 }
 

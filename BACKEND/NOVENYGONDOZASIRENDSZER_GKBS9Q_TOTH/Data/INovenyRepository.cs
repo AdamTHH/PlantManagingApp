@@ -11,5 +11,6 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Data
         void Update(int id, Noveny updatedNoveny);
         void Delete(int id);
         IEnumerable<DailyPlan> GetWeeklyPlan();
+        void UploadMatrix(string novenyMatrix);
     }
 }
