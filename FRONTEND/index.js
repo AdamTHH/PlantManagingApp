@@ -61,16 +61,16 @@ function displayWeeklyPlan(dailyPlants) {
     dailyPlants.forEach((dailyPlan, index) => {
         const dayDiv = document.getElementById(`d${index + 1}`);
 
-        const plantGrid = dailyPlan.napiOntozendoNovenyek.map(plant => {
-            return `
-            <div class="d-flex justify-content-between">
-                <span>${plant.nev}</span>
-                <span class="badge bg-primary">${plant.napiVizigeny} mL</span>
-            </div>`;
-        }).join('');
+        const plantGrid = dailyPlan.napiOntozendoNovenyek.map(plant =>
+            `<div class="d-flex justify-content-between">
+                <span class="fw-medium">${plant.nev}</span>
+                <span class="text-primary">${plant.napiVizigeny} mL</span>
+            </div>`
+        ).join('');
 
         dayDiv.innerHTML = `<div>${plantGrid}</div>
-        <div class="d-flex justify-content-between">
+        <hr class="${dailyPlan.napiVizigenySzum > 0 ? "d-flex" : "d-none"}">
+        <div class="${dailyPlan.napiVizigenySzum > 0 ? "d-flex" : "d-none"} justify-content-between">
             <span class="text-info">Összesen:</span>
             <span class="text-info font-weight-bold">${dailyPlan.napiVizigenySzum} mL</span>
         </div>`;
@@ -94,7 +94,7 @@ function uploadMatrix() {
 
     fetch(`${url}/uploadmatrix`, requestOptions)
         .then((response) => response.text())
-        .then((result) => {console.log(result); refreshPlants();})
+        .then((result) => { console.log(result); refreshPlants(); })
         .catch((error) => console.error(error));
 }
 
@@ -105,7 +105,7 @@ function editRow(row, plant) {
         <td><select id="editCategoryDropdown" class="form-control" required>
     <option value="Virag" ${plant.kategoria === "Virag" ? "selected" : ""}>Virág</option>
     <option value="Szukkulens" ${plant.kategoria === "Szukkulens" ? "selected" : ""}>Szukkulens</option>
-    <option value="FuszerNoveny" ${plant.kategoria === "FuszerNoveny" ? "selected" : ""}>Fűszernövény</option>
+    <option value="FuszerNoveny" ${plant.kategoria === "Fuszernoveny" ? "selected" : ""}>Fűszernövény</option>
     <option value="Kertinoveny" ${plant.kategoria === "Kertinoveny" ? "selected" : ""}>Kertinövény</option>
     <option value="Szobanoveny" ${plant.kategoria === "Szobanoveny" ? "selected" : ""}>Szobanövény</option>
 </select></td>
