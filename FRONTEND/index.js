@@ -3,9 +3,9 @@ let url = 'https://localhost:7107/api/noveny';
 function refreshPlants() {
     fetch(url)
         .then(response => response.json())
-        .then(data => {
-            console.log("plants:", data);
-            displayPlants(data);
+        .then(result => {
+            console.log("plants:", result);
+            displayPlants(result);
         })
         .catch(error => console.error(error));
 
@@ -28,13 +28,11 @@ function displayPlants(plants) {
     const tbody = document.getElementById("plant-table").querySelector('tbody');
     tbody.innerHTML = '';
     plants.forEach(p => {
-        const opacity = Math.min(Math.max(p.napiVizigeny / 5, 0), 1);
-
         const row = document.createElement('tr');
         row.innerHTML = `
             <td style="font-weight: 600;">${p.nev}</td>
             <td>${p.kategoria}</td>
-            <td style="background-color: rgba(0, 0, 255, ${opacity});">${p.napiVizigeny}</td>
+            <td>${p.napiVizigeny}</td>
             <td>${p.ontozesiGyakorisag}</td>
             <td>
                 <button class="btn btn-warning btn-sm edit-btn">✏️</button>
@@ -68,13 +66,14 @@ function displayWeeklyPlan(dailyPlants) {
         }
 
         const cell = document.createElement("td");
-        cell.innerHTML = `<p>${index + 1}</p>`;
+        cell.style = `${dailyPlan.napiOntozendoNovenyek.length >= 3 ? "background-color: rgb(255, 156, 156);" : ""}`;
 
+        cell.innerHTML = `<p class="cellDayNumber d-inline" style="font-weight: 600;">${index + 1}</p>`;
 
         const plantList = dailyPlan.napiOntozendoNovenyek.map(plant =>
             `<div class="d-flex justify-content-between">
                 <span class="fw-medium">${plant.nev}</span>
-                <span class="text-primary">${plant.napiVizigeny} mL</span>
+                <span class="text-info">${plant.napiVizigeny} mL</span>
             </div>`
         ).join("");
 
@@ -82,13 +81,13 @@ function displayWeeklyPlan(dailyPlants) {
 
         dayDiv.innerHTML = `
             <div>${plantList}</div>
-            <hr class="${dailyPlan.napiVizigenySzum > 0 ? "d-flex" : "d-none"}">
+            <hr class="${dailyPlan.napiVizigenySzum > 0 ? "d-flex" : "d-none"} my-1">
             <div class="${dailyPlan.napiVizigenySzum > 0 ? "d-flex" : "d-none"} justify-content-between">
                 <span class="text-info">Összesen:</span>
-                <span class="text-info fw-bold">${dailyPlan.napiVizigenySzum} mL</span>
+                <span class="text-info font-weight-bold">${dailyPlan.napiVizigenySzum} mL</span>
             </div>
         `;
-        
+
         cell.appendChild(dayDiv);
         row.appendChild(cell);
     });
@@ -111,7 +110,10 @@ function uploadMatrix() {
 
     fetch(`${url}/uploadmatrix`, requestOptions)
         .then((response) => response.text())
-        .then((result) => { console.log(result); refreshPlants(); })
+        .then((result) => {
+            console.log(result);
+            refreshPlants();
+        })
         .catch((error) => console.error(error));
 }
 
@@ -119,13 +121,15 @@ function uploadMatrix() {
 function editRow(row, plant) {
     row.innerHTML = `
         <td><input type="text" class="form-control plant-name" value="${plant.nev}"></td>
-        <td><select id="editCategoryDropdown" class="form-control" required>
-    <option value="Virag" ${plant.kategoria === "Virag" ? "selected" : ""}>Virág</option>
-    <option value="Szukkulens" ${plant.kategoria === "Szukkulens" ? "selected" : ""}>Szukkulens</option>
-    <option value="FuszerNoveny" ${plant.kategoria === "Fuszernoveny" ? "selected" : ""}>Fűszernövény</option>
-    <option value="Kertinoveny" ${plant.kategoria === "Kertinoveny" ? "selected" : ""}>Kertinövény</option>
-    <option value="Szobanoveny" ${plant.kategoria === "Szobanoveny" ? "selected" : ""}>Szobanövény</option>
-</select></td>
+        <td>
+            <select id="editCategoryDropdown" class="form-control" required>
+                <option value="Virag" ${plant.kategoria === "Virag" ? "selected" : ""}>Virág</option>
+                <option value="Szukkulens" ${plant.kategoria === "Szukkulens" ? "selected" : ""}>Szukkulens</option>
+                <option value="FuszerNoveny" ${plant.kategoria === "Fuszernoveny" ? "selected" : ""}>Fűszernövény</option>
+                <option value="Kertinoveny" ${plant.kategoria === "Kertinoveny" ? "selected" : ""}>Kertinövény</option>
+                <option value="Szobanoveny" ${plant.kategoria === "Szobanoveny" ? "selected" : ""}>Szobanövény</option>
+            </select>
+        </td>
         <td><input type="number" class="form-control plant-daily-water" value="${plant.napiVizigeny}"></td>
         <td><input type="number" class="form-control plant-watering-frequency" value="${plant.ontozesiGyakorisag}"></td>
         <td>
@@ -138,14 +142,13 @@ function editRow(row, plant) {
     const cancelButton = row.getElementsByClassName('cancel-btn')[0];
 
     saveButton.addEventListener('click', () => {
-        const updatedPlant = {
+        updatePlant({
             id: plant.id,
             nev: row.querySelector('.plant-name').value,
             kategoria: row.querySelector('#editCategoryDropdown').value,
             napiVizigeny: parseFloat(row.querySelector('.plant-daily-water').value),
             ontozesiGyakorisag: parseInt(row.querySelector('.plant-watering-frequency').value),
-        };
-        updatePlant(updatedPlant);
+        });
     });
 
     cancelButton.addEventListener('click', () => {
@@ -154,14 +157,18 @@ function editRow(row, plant) {
 }
 
 function deletePlant(id) {
-    fetch(`${url}/${id}`, {
-        method: 'DELETE',
-    })
-        .then(r => {
-            console.log(`ID=${id} deleted`);
+    const requestOptions = {
+        method: "DELETE",
+        redirect: "follow"
+    };
+
+    fetch(`${url}/${id}`, requestOptions)
+        .then((response) => response.text())
+        .then((result) => {
+            console.log(result);
             refreshPlants();
         })
-        .catch(error => console.error(error));
+        .catch((error) => console.error(error));
 }
 
 function updatePlant(plant) {
@@ -180,7 +187,7 @@ function updatePlant(plant) {
     fetch(`${url}/${plant.id}`, requestOptions)
         .then((response) => response.text())
         .then((result) => {
-            console.log('Plant updated successfully');
+            console.log(result);
             refreshPlants();
         })
         .catch((error) => console.error(error));
@@ -211,7 +218,7 @@ function createPlant(event) {
     fetch(url, requestOptions)
         .then((response) => response.text())
         .then((result) => {
-            console.log("plant added: ", result);
+            console.log(result);
             refreshPlants();
         })
         .catch((error) => console.error(error));
