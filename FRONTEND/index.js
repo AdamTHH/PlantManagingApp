@@ -66,9 +66,9 @@ function displayWeeklyPlan(dailyPlants) {
         }
 
         const cell = document.createElement("td");
-        cell.style = `${dailyPlan.napiOntozendoNovenyek.length >= 3 ? "background-color: rgb(255, 156, 156);" : ""}`;
+        cell.style = ``;
 
-        cell.innerHTML = `<p class="cellDayNumber d-inline" style="font-weight: 600;">${index + 1}</p>`;
+        cell.innerHTML = `<p class="cellDayNumber p-1 px-2 rounded" style="font-weight: 600; ${dailyPlan.napiOntozendoNovenyek.length >= 3 ? "background-color: rgb(255, 156, 156);" : ""}">${index + 1}</p>`;
 
         const plantList = dailyPlan.napiOntozendoNovenyek.map(plant =>
             `<div class="d-flex justify-content-between">
