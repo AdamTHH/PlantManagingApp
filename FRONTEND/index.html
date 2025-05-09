@@ -23,7 +23,8 @@
                         <div class="card-body">
                             <form id="plant-form" onsubmit="createPlant(event)">
                                 <div class="mb-2">
-                                    <input type="text" id="name" class="form-control" placeholder="Növény neve" required>
+                                    <input type="text" id="name" class="form-control" placeholder="Növény neve"
+                                        required>
                                 </div>
                                 <div class="mb-2">
                                     <select id="category" class="form-control" required>
@@ -56,7 +57,8 @@
                             <textarea id="matrix-input" class="form-control" rows="6"
                                 placeholder="Rózsa,Virág,2,3 Aloe Vera,Szukkulens,0.5,30..."></textarea>
                             <div class="text-center mt-2">
-                                <button onclick="uploadMatrix()" class="btn btn-primary btn-block">Mátrix feltöltése</button>
+                                <button onclick="uploadMatrix()" class="btn btn-primary btn-block">Mátrix
+                                    feltöltése</button>
                             </div>
                         </div>
                     </div>
@@ -100,7 +102,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                    
+
                 </tbody>
             </table>
         </div>
@@ -109,14 +111,26 @@
     <div class="container mt-3 py-3 bg-light shadow-lg">
         <h3 class="mb-4">✨ Extra</h3>
 
-        <h6 class="mb-3 text-center">Fun Fact</h6>
+
+        <div class="text-center">
+            <h6 class="mb-3 text-center d-inline pr-2">Fun Fact</h6>
+            <button onclick="getFunFact()" class="btn btn-light" type="button"><svg xmlns="http://www.w3.org/2000/svg"
+                    width="24" height="24" fill="currentColor" class="bi bi-arrow-clockwise" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M8 3a5 5 0 1 0 4.546 2.914.5.5 0 0 1 .908-.417A6 6 0 1 1 8 2z" />
+                    <path
+                        d="M8 4.466V.534a.25.25 0 0 1 .41-.192l2.36 1.966c.12.1.12.284 0 .384L8.41 4.658A.25.25 0 0 1 8 4.466" />
+                </svg>
+            </button>
+        </div>
 
         <div class="card mb-3 mx-auto" style="width: 60%;">
             <div class="card-body">
-                <p id="fun-fact" class="text-center">Fun fact about plants will be displayed here.Fun fact about plants will be displayed here.Fun fact about plants will be displayed here.Fun fact about plants will be displayed here.</p>
+                <p id="fun-fact" class="text-center">Fun fact about plants will be displayed here.Fun fact about plants
+                    will be displayed here.Fun fact about plants will be displayed here.Fun fact about plants will be
+                    displayed here.</p>
             </div>
         </div>
-        
+
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"
