@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using Microsoft.EntityFrameworkCore;
-using NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Models;
+﻿using NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Models;
 
 namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Data
 {
@@ -84,6 +80,45 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Data
 
                 Create(new Noveny(values[0].Trim(), kategoria, napiVizigeny, ontozesiGyakorisag));
             }
+        }
+
+        public string GetFunFact()
+        {
+            Random rand = new Random();
+
+            string ranomNoveny = db.Novenyek.ToList()[rand.Next(db.Novenyek.Count())].Nev;
+
+            string[] allapotok = {
+    "szereti",
+    "várja",
+    "rühelli",
+    "keresi",
+    "megveti",
+    "óvja",
+    "gyűlöli",
+    "tiszteli",
+    "csodálja",
+    "nem érti"
+};
+
+            string allapot = allapotok[rand.Next(allapotok.Length)];
+
+            string[] fonevek = {
+    "rózsát",
+    "levendulát",
+    "kertészkedést",
+    "locsolást",
+    "napraforgót",
+    "ültetést",
+    "gyomlálást",
+    "komposztálást",
+    "metszést",
+    "fűnyírást"
+};
+
+            string fonev = fonevek[rand.Next(fonevek.Length)];
+
+            return $"A {ranomNoveny} {allapot} a {fonev}!";
         }
     }
 }
