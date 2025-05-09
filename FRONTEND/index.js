@@ -224,3 +224,19 @@ function createPlant(event) {
         .catch((error) => console.error(error));
 }
 
+function getFunFact() {
+    const requestOptions = {
+        method: "GET",
+        redirect: "follow"
+    };
+
+    fetch(`${url}/getfunfact`, requestOptions)
+        .then((response) => response.text())
+        .then((result) => {console.log(result);displayFunFact(result)})
+        .catch((error) => console.error(error));
+}
+
+function displayFunFact(funFact) {
+    const funFactElement = document.getElementById("fun-fact");
+    funFactElement.innerText = funFact;
+}
