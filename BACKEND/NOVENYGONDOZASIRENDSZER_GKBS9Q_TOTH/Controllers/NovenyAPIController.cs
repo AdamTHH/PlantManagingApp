@@ -95,5 +95,17 @@ namespace NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers
                 return BadRequest(ex.Message);
             }
         }
+        [HttpGet("getfunfact")]
+        public ActionResult GetFunFact()
+        {
+            try
+            {   
+                return Ok(repo.GetFunFact());
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
+        }
     }
 }

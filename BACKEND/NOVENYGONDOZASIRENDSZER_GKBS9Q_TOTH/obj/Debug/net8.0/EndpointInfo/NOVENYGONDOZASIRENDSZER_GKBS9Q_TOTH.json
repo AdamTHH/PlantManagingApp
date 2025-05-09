@@ -242,6 +242,18 @@
         }
       }
     },
+    "/api/Noveny/getfunfact": {
+      "get": {
+        "tags": [
+          "Noveny"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
     "/": {
       "get": {
         "tags": [

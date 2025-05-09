@@ -3,20 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|c:\\users\\itzyt\\desktop\\novenygondozasirendszer_gkbs9q_toth\\backend\\novenygondozasirendszer_gkbs9q_toth\\models\\noveny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|solutionrelative:novenygondozasirendszer_gkbs9q_toth\\models\\noveny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|c:\\users\\itzyt\\desktop\\novenygondozasirendszer_gkbs9q_toth\\backend\\novenygondozasirendszer_gkbs9q_toth\\models\\dailyplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|solutionrelative:novenygondozasirendszer_gkbs9q_toth\\models\\dailyplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|c:\\users\\itzyt\\desktop\\novenygondozasirendszer_gkbs9q_toth\\backend\\novenygondozasirendszer_gkbs9q_toth\\controllers\\novenyapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|solutionrelative:novenygondozasirendszer_gkbs9q_toth\\controllers\\novenyapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|c:\\users\\itzyt\\desktop\\novenygondozasirendszer_gkbs9q_toth\\backend\\novenygondozasirendszer_gkbs9q_toth\\data\\novenyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|solutionrelative:novenygondozasirendszer_gkbs9q_toth\\data\\novenyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|c:\\users\\itzyt\\desktop\\novenygondozasirendszer_gkbs9q_toth\\backend\\novenygondozasirendszer_gkbs9q_toth\\controllers\\novenyapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|solutionrelative:novenygondozasirendszer_gkbs9q_toth\\controllers\\novenyapicontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|c:\\users\\itzyt\\desktop\\novenygondozasirendszer_gkbs9q_toth\\backend\\novenygondozasirendszer_gkbs9q_toth\\data\\inovenyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|solutionrelative:novenygondozasirendszer_gkbs9q_toth\\data\\inovenyrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|c:\\users\\itzyt\\desktop\\novenygondozasirendszer_gkbs9q_toth\\backend\\novenygondozasirendszer_gkbs9q_toth\\models\\noveny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|solutionrelative:novenygondozasirendszer_gkbs9q_toth\\models\\noveny.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|c:\\users\\itzyt\\desktop\\novenygondozasirendszer_gkbs9q_toth\\backend\\novenygondozasirendszer_gkbs9q_toth\\models\\dailyplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|solutionrelative:novenygondozasirendszer_gkbs9q_toth\\models\\dailyplan.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C6B26EC5-FFF9-42E7-8D4B-D7C0CC3ABAC0}|NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.csproj|c:\\users\\itzyt\\desktop\\novenygondozasirendszer_gkbs9q_toth\\backend\\novenygondozasirendszer_gkbs9q_toth\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +34,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
+              "Title": "INovenyRepository.cs",
+              "DocumentMoniker": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Data\\INovenyRepository.cs",
+              "RelativeDocumentMoniker": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Data\\INovenyRepository.cs",
+              "ToolTip": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Data\\INovenyRepository.cs",
+              "RelativeToolTip": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Data\\INovenyRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-09T18:46:05.187Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "DailyPlan.cs",
               "DocumentMoniker": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Models\\DailyPlan.cs",
               "RelativeDocumentMoniker": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Models\\DailyPlan.cs",
@@ -46,7 +63,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Program.cs",
               "RelativeDocumentMoniker": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Program.cs",
@@ -58,37 +75,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 0,
               "Title": "NovenyAPIController.cs",
               "DocumentMoniker": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Controllers\\NovenyAPIController.cs",
               "RelativeDocumentMoniker": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Controllers\\NovenyAPIController.cs",
               "ToolTip": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Controllers\\NovenyAPIController.cs",
               "RelativeToolTip": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Controllers\\NovenyAPIController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAFgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEgAAAAAAAAAAAA7wGUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T13:35:30.205Z"
+              "WhenOpened": "2025-05-03T13:35:30.205Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "NovenyRepository.cs",
               "DocumentMoniker": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Data\\NovenyRepository.cs",
               "RelativeDocumentMoniker": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Data\\NovenyRepository.cs",
               "ToolTip": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Data\\NovenyRepository.cs",
               "RelativeToolTip": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Data\\NovenyRepository.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAA3wE4AAAAsAAAAAAAAAA==",
+              "ViewState": "AgIAADwAAAAAAAAAAAAkwHUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-05-03T12:43:39.511Z"
+              "WhenOpened": "2025-05-03T12:43:39.511Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 3,
               "Title": "Noveny.cs",
               "DocumentMoniker": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Models\\Noveny.cs",
               "RelativeDocumentMoniker": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Models\\Noveny.cs",
               "ToolTip": "C:\\Users\\itzyt\\Desktop\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\BACKEND\\NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Models\\Noveny.cs",
               "RelativeToolTip": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH\\Models\\Noveny.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAgwA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-03T12:33:07.524Z",
               "EditorCaption": ""

@@ -118,6 +118,16 @@
   },
   {
     "ContainingType": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers.NovenyController",
+    "Method": "GetFunFact",
+    "RelativePath": "api/Noveny/getfunfact",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "NOVENYGONDOZASIRENDSZER_GKBS9Q_TOTH.Controllers.NovenyController",
     "Method": "GetWeeklyPlan",
     "RelativePath": "api/Noveny/getweeklyplan",
     "HttpMethod": "GET",
